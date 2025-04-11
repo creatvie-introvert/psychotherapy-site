@@ -103,6 +103,7 @@ p { font-size: 1.6rem; }
 /* Components */
 .button {
     display: inline-block;
+    width: fit-content;
     padding: 1.2rem 2.4rem;
     font-weight: 580;
     border-radius: 0.8rem;
@@ -159,6 +160,7 @@ a:focus-visible {
 
 /* Header styles */
 .site-header {
+    background-color: var(--bg-base);
     border-bottom: 1px solid var(--soft-border);
     box-shadow: var(--shadow-card);
     position: sticky;
@@ -230,4 +232,31 @@ a:focus-visible {
     height: auto;
     border-radius: 1.2rem;
     box-shadow: var(--shadow-card);
+}
+
+/* About Preview styles */
+.about-preview {
+    background-color: var(--bg-alt);
+    padding: 6rem 0;
+}
+
+.about-preview__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.about-preview__heading {
+    flex: 1;
+    font-size: 4.8rem;
+}
+
+.about-preview__content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 600px;
 }
