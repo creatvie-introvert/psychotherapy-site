@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/roboto-variable/Roboto-VariableFont_wdth,wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-stretch: 75% 100%;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/roboto-variable/Roboto-Italic-VariableFont_wdth,wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-stretch: 75% 100%;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+/* Simple CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    height: 100%;
+}
+
+/* CSS Variable Definitions */
+:root {
+    /* Background colours */
+    --bg-base: #F8F7F4;
+    --bg-alt: #EAE9E3;
+    --bg-surface: #FFFFFF;
+
+    /* Border colour */
+    --soft-border: #D8D7D2;
+
+    /* Text colours */
+    --primary-txt: #2C2C2C;
+    --muted-txt: #666660;
+    --inverted-txt: #FFFFFF;
+
+    /* Accent colours */
+    --acc-green: #8C9A7C;
+    --acc-olive: #AAB399;
+    --acc-peach: #F3E8DD;
+
+    /* Button/Link hover colour */
+    --hover-clr: #748468;
+
+    /* Card shadows */
+    --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.04);
+    --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    /* Button shadows */
+    --shadow-btn: 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-btn-hover: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Base styles */
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: var(--bg-base);  
+    color: var(--primary-txt);        
+}
+
+a {
+    text-decoration: none; 
+    color: var(--primary-txt);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--acc-green);
+}
+
+h1, h2 { font-weight: 720; }
+
+h1, h2, p { line-height: 1.2; }
+
+h1 { font-size: 4.8rem; }
+
+h2 { font-size: 2.4rem; }
+
+p { font-size: 1.6rem; }
+
+/* Global container utility */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Components */
+.button {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    font-weight: 580;
+    border-radius: 0.8rem;
+    text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Primary button */
+.button--primary {
+    background-color: var(--acc-green);
+    color: var(--inverted-txt);
+    box-shadow: var(--shadow-btn);
+    border: none;
+}
+
+.button--primary:hover {
+    background-color: var(--acc-olive);
+    color: var(--inverted-txt);
+    box-shadow: var(--shadow-btn-hover);
+}
+
+/* Secondary button */
+.button--secondary {
+    background-color: transparent;
+    color: var(--acc-green);
+    border: 2px solid var(--acc-green);
+}
+
+.button--secondary:hover {
+    background-color: var(--acc-peach);
+    color: var(--acc-green);
+    border-color: var(--hover-clr);
+}
+
+.button:focus-visible,
+a:focus-visible {
+  box-shadow: 0 0 0 4px rgba(140, 154, 124, 0.4);
+  outline: none;
+}
+
+.button--ghost {
+    background-color: transparent;
+    color: var(--acc-green);
+    border: none;
+    padding: 1rem 1.2rem;
+  }
+  
+.button--ghost:hover,
+.button--ghost:focus-visible {
+    color: var(--hover-clr);
+    text-decoration: underline;
+  }
+  
+
+/* Header styles */
+.site-header {
+    border-bottom: 1px solid var(--soft-border);
+    box-shadow: var(--shadow-card);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.site-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.site-header__logo a {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.site-header__nav {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.site-header__nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2.4rem;
+}
+
+/* Hero styles */
+.hero {
+    padding: 6rem 0;
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero__image {
+    flex: 1;
+    min-width: 300px;
+    text-align: right;
+}
+
+.hero__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.2rem;
+    box-shadow: var(--shadow-card);
+}
