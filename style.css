@@ -195,7 +195,7 @@ a:focus-visible {
     padding: 6rem 0;
 }
 
-.about-preview {
+.about-preview, .quote-section {
     background-color: var(--bg-alt);
     padding: 6rem 0;
 }
@@ -338,4 +338,51 @@ a:focus-visible {
 .services-preview__cta {
     display: flex;
     justify-content: center;
+}
+
+/* Quote section */
+.quote-section__video-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+}
+
+.quote__video {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.quote__video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: inherit;
+}
+
+.quote__text p {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.quote__mark {
+    font-size: 6.4rem;
+    line-height: 1;
+    margin-right: 0.6rem;
+}
+
+.quote__text p.quote__author {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--muted-txt);
+    margin-top: 2rem;
+    text-align: right;
 }
