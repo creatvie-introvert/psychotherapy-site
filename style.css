@@ -86,9 +86,7 @@ h1, h2 { font-weight: 720; }
 
 h1, h2, p { line-height: 1.2; }
 
-h1 { font-size: 4.8rem; }
-
-h2 { font-size: 2.4rem; }
+h1, h2 { font-size: 4.8rem; }
 
 p { font-size: 1.6rem; }
 
@@ -193,11 +191,16 @@ a:focus-visible {
     gap: 2.4rem;
 }
 
-/* Hero styles */
-.hero {
+.hero, .services-preview {
     padding: 6rem 0;
 }
 
+.about-preview {
+    background-color: var(--bg-alt);
+    padding: 6rem 0;
+}
+
+/* Hero styles */
 .hero__container {
     display: flex;
     align-items: center;
@@ -235,11 +238,6 @@ a:focus-visible {
 }
 
 /* About Preview styles */
-.about-preview {
-    background-color: var(--bg-alt);
-    padding: 6rem 0;
-}
-
 .about-preview__container {
     display: flex;
     align-items: flex-start;
@@ -259,4 +257,85 @@ a:focus-visible {
     flex-direction: column;
     gap: 1.6rem;
     max-width: 600px;
+}
+
+/* Services Preview Section */
+.services-preview {
+    text-align: center;
+}
+
+.services-preview__heading {
+    margin-bottom: 1.6rem;
+}
+
+.services-preview__intro {
+    color: var(--muted-txt);
+    margin-bottom: 4.8rem;
+}
+
+/* Services grid */
+.services-preview__grid {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    justify-content: center;
+    margin-bottom: 4.8rem;
+}
+
+/* Individual service cards */
+.service-card {
+    background-color: var(--bg-surface);
+    padding: 3.2rem 2.4rem;
+    border-radius: 1.2rem;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.6rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(105%);
+    box-shadow: var(--acc-green);
+}
+
+.service-card-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: left;
+}
+
+.service-card__icon svg {
+    width: 32px;
+    height: 32px;
+    display: block;
+    aspect-ratio: 1/1;
+    transform: scale(0.9);
+}
+
+.service-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.service-card__description {
+    font-size: 1.6rem;
+    color: var(--muted-txt);
+    line-height: 1.6;
+}
+
+.services-preview__cta {
+    display: flex;
+    justify-content: center;
 }
