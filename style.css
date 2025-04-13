@@ -174,9 +174,14 @@ a:focus-visible {
     padding-bottom: 2rem;
 }
 
-.site-header__logo a {
+.site-logo strong {
     font-size: 2rem;
-    font-weight: 600;
+  }
+  
+.site-logo span {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--muted-txt);
 }
 
 .site-header__nav {
@@ -191,7 +196,7 @@ a:focus-visible {
     gap: 2.4rem;
 }
 
-.hero, .services-preview {
+.hero, .services-preview, .booking-cta {
     padding: 6rem 0;
 }
 
@@ -298,7 +303,7 @@ a:focus-visible {
 
 .service-card:hover {
     transform: scale(105%);
-    box-shadow: var(--acc-green);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .service-card-heading {
@@ -375,7 +380,7 @@ a:focus-visible {
 
 .quote__mark {
     font-size: 6.4rem;
-    line-height: 1;
+    line-height: 1.4;
     margin-right: 0.6rem;
 }
 
@@ -385,4 +390,109 @@ a:focus-visible {
     color: var(--muted-txt);
     margin-top: 2rem;
     text-align: right;
+}
+
+.booking-cta {
+    text-align: center;
+}
+
+.booking-cta__container {
+    border: 1px solid var(--soft-border);
+    border-radius: 0.8rem;
+    padding: 6.4rem;
+}
+
+.booking-cta__heading {
+    margin-bottom: 1.6rem;
+}
+
+.booking-cta__subheading {
+    margin-bottom: 3.2rem;
+}
+
+.booking-cta__note {
+    display: block;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--muted-txt);
+    margin-top: 1.6rem;
+}
+
+/* Site Footer styles */
+.site-footer {
+    border-top: 1px solid var(--soft-border);
+    padding: 4.8rem 0 3.2rem;
+    font-size: 1.4rem;
+}
+
+.site-footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.site-footer__info {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.site-footer__contact p {
+    margin-bottom: 0.4rem;
+}
+
+.site-footer__social {
+    display: flex;
+    gap: 1.6rem;
+    margin-top: 1.2rem;
+}
+
+.site-footer__social a {
+    font-size: 2.2rem;
+    transition: color 0.2s ease;
+}
+
+.site-footer__social a:hover {
+    color: var(--acc-green);
+}
+
+.site-footer__nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1.2rem 3.2rem;
+}
+
+.site-footer__nav a {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.site-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--soft-border);
+    font-size: 1.2rem;
+    color: var(--muted-txt);
+}
+
+.site-footer__legal {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.site-footer__legal a {
+    color: var(--muted-txt);
+    font-style: italic;
+}
+
+.site-footer__legal a:hover {
+    text-decoration: underline;
 }

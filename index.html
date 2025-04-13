@@ -9,24 +9,26 @@
     <link rel="shortcut icon" href="mb_favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/776afda7e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="site-header">
         <div class="site-header__container container">
             <div class="site-header__logo">
-                <a href="index.html">Marilyn Bedeau BSc., MSc</a>
+                <a href="index.html"><strong>Marilyn Bedeau</strong><br><span>Psychodynamic Therapist</span></a>
             </div>
 
             <nav class="site-header__nav" aria-label="Main Navigation">
                 <ul class="site-header__nav-list">
-                    <li><a href="#" aria-current="page">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" aria-current="page" rel="noopener noreferrer">Home</a></li>
+                    <li><a href="#" rel="noopener noreferrer">About</a></li>
+                    <li><a href="#" rel="noopener noreferrer">Services</a></li>
+                    <li><a href="#" rel="noopener noreferrer">Blog</a></li>
+                    <li><a href="#" rel="noopener noreferrer">Contact</a></li>
                 </ul>
 
-                <a href="#" class="button button--primary">Book a Session</a>
+                <a href="#" class="button button--primary" rel="noopener noreferrer">Book a Session</a>
             </nav>
         </div>
     </header>
@@ -42,8 +44,8 @@
                         experiences, you're not alone.
                     </p>
                     <div class="hero__actions">
-                        <a href="#" class="button button--primary">Book a Session</a>
-                        <a href="#" class="button button--secondary">Learn More</a>
+                        <a href="#" class="button button--primary" rel="noopener noreferrer">Book a Session</a>
+                        <a href="#" class="button button--secondary" rel="noopener noreferrer">Learn More</a>
                     </div>
                 </div>
 
@@ -65,7 +67,7 @@
                     </p>
                     <p>Learn more about my background and approach.</p>
 
-                    <a href="#" class="button button--primary">Learn More</a>
+                    <a href="#" class="button button--primary" rel="noopener noreferrer">Learn More</a>
                 </div>
             </div>
         </section>
@@ -168,7 +170,7 @@
                 </div>
 
                 <div class="services-preview__cta">
-                    <a href="#" class="button button--secondary">Explore All Services</a>
+                    <a href="#" class="button button--secondary" rel="noopener noreferrer">Explore All Services</a>
                 </div>
             </div>
         </section>
@@ -184,9 +186,10 @@
 
                     <div class="quote__text">
                         <p>
-                            <span class="quote__mark" aria-hidden="true">"</span>
+                            <span class="quote__mark" aria-hidden="true">"</span><br>
                             The therapist is not an expert who can 'fix' people. Instead, the therapist is a skilled companion 
                             in the process of growth and discovery.
+                            
                         </p>
                         <p class="quote__author">
                             — Nancy McWilliams, PhD (renowned psychodynamic therapist and author)
@@ -196,10 +199,66 @@
             </div>
         </section>
 
-        <section class="booking-cta"></section>
+        <section class="booking-cta" aria-labelledby="booking-cta-heading">
+            <div class="booking-cta__container container">
+                <h2 class="booking-cta__heading" id="booking-cta-heading">Ready to Begin?</h2>
+                <p class="booking-cta__subheading">
+                    Take the first step toward understanding and healing.
+                </p>
+                <a href="#" class="button button--primary booking-cta__button" aria-label="Book a therapy session with Marilyn Bedeau" rel="noopener noreferrer">Book a Session</a>
+                <small class="booking-cta__note">Sessions are 50 minutes | £70</small>
+            </div>
+        </section>
     </main>
 
-    <footer role="contentinfo" aria-label="Site Footer"></footer>
+    <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
+        <div class="site-footer__container container">
+            <div class="site-footer__top">
+                <div class="site-footer__info">
+                    <p class="site-footer__brand"><strong>Marilyn Bedeau Therapy</strong></p>
+                    <p class="site-footer__reg">Registered Member of BACP no. 1111111</p>
+
+                    <address class="site-footer__contact">
+                        <p><strong>Contact:</strong></p>
+                        <p><a href="mailto:email@email.com" rel="noopener noreferrer">email@email.com</a></p>
+                    </address>
+
+                    <address class="site-footer__social">
+                        <a href="#" aria-label="Facebook" rel="noopener noreferrer">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </address>
+                </div>
+
+                <nav class="site-footer__nav" aria-label="Footer Navigation">
+                    <ul>
+                        <li><a href="#" rel="noopener noreferrer">Home</a></li>
+                        <li><a href="#" rel="noopener noreferrer">About</a></li>
+                        <li><a href="#" rel="noopener noreferrer">Services</a></li>
+                        <li><a href="#" rel="noopener noreferrer">Blog</a></li>
+                        <li><a href="#" rel="noopener noreferrer">Contact</a></li>
+                        <li><a href="#" rel="noopener noreferrer">Emergency</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="site-footer__bottom">
+                <p>&copy; 2025 <em>Marilyn Bedeau</em></p>
+                <ul class="site-footer__legal">
+                    <li><a href="#" rel="noopener noreferrer">Privacy Policy</a></li>
+                    <li><a href="#" rel="noopener noreferrer">Terms of Service</a></li>
+                    <li><a href="#" rel="noopener noreferrer">Cookie Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
