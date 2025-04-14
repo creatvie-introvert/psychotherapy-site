@@ -1,0 +1,21 @@
+# macOS system files
+.DS_Store
+
+# VS Code settings (if used)
+.vscode/
+
+# Logs
+*.log
+
+# OS thumbnails and backups
+Thumbs.db
+*.bak
+
+# Node modules (for future JavaScript frameworks)
+node_modules/
+
+# Font files — comment this out if you want to track your custom fonts
+assets/fonts/
+
+# Personal configuration files
+.env
