@@ -567,7 +567,7 @@ a:focus-visible {
 }
 
 
-/* About page - Qualofications section */
+/* About page - Qualifications section */
 .qualifications {
     background-color: var(--bg-alt);
     padding: 6rem 0;
@@ -626,6 +626,54 @@ a:focus-visible {
     font-style: italic;
 }
 
+/* About page - Affiliations section */
+.affiliations-carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 4rem 0;
+    background-color: var(--bg-surface);
+}
+
+.affiliations-carousel__track {
+    display: flex;
+    /* width: max-content; */
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite;
+}
+
+.affiliations-carousel__track:hover {
+    animation-play-state: paused;
+}
+
+.affiliations-carousel__inner {
+    display: flex;
+}
+
+.affiliations-carousel__slide {
+    flex: 0 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+}
+
+.affiliations-carousel__slide img {
+    height: 50px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.affiliations-carousel__slide img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
 /* ======================
    Animations / Keyframes
    ====================== */
@@ -655,6 +703,12 @@ a:focus-visible {
 
 .animate-on-scroll.delay-3 { transition-delay: 0.6s; }
 
+@keyframes scroll-left {
+    0% { transform: translateX(100%); }
+
+    100% { transform: translateX(-103%); }
+}
+
 /* =======================================
    Accessibility: Respect Reduced Motion
    ======================================= */
@@ -663,5 +717,9 @@ a:focus-visible {
     * {
         animation: none !important;
         transition: none !important;
+    }
+
+    .affiliations-carousel__track {
+        animation: none !important;
     }
 }
