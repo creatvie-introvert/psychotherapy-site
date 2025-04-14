@@ -15,7 +15,7 @@ Thumbs.db
 node_modules/
 
 # Font files — comment this out if you want to track your custom fonts
-assets/fonts/
+# assets/fonts/
 
 # Personal configuration files
 .env
