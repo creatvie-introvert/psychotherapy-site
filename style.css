@@ -90,12 +90,20 @@ h1, h2 { font-size: 4.8rem; }
 
 p { font-size: 1.6rem; }
 
-/* Global container utility */
+/* ========================
+   Utility Classes
+======================== */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
 }
 
 /* Components */
@@ -196,6 +204,10 @@ a:focus-visible {
     gap: 2.4rem;
 }
 
+/* =======================================
+   Homepage Sections
+======================================= */
+
 .hero, .services-preview, .booking-cta {
     padding: 6rem 0;
 }
@@ -212,6 +224,28 @@ a:focus-visible {
     justify-content: space-between;
     gap: 4rem;
     flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(2rem);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.hero__heading, .hero__subheading, .hero__actions {
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.hero__heading {
+    animation-delay: 0.2s;
+}
+
+.hero__subheading {
+    animation-delay: 0.4s;
+}
+
+.hero__actions {
+    animation-delay: 0.6s;
 }
 
 .hero__content {
@@ -495,4 +529,84 @@ a:focus-visible {
 
 .site-footer__legal a:hover {
     text-decoration: underline;
+}
+
+/* =======================================
+   Page-Specific Layouts
+======================================= */
+
+/* Page header styles */
+.page-header {
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.page-header__title {
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.page-header__subtitle {
+    color: var(--muted-txt);
+}
+
+/* About page - Bio section */
+.about-bio {
+    padding: 6rem 0;
+}
+.about-bio__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(2rem);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.about-bio__image {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    background-color: var(--acc-peach);
+}
+
+.about-bio__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+}
+
+.about-bio__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 280px;
+}
+
+/* ======================
+   Animations / Keyframes
+   ====================== */
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =======================================
+   Accessibility: Respect Reduced Motion
+   ======================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
 }
