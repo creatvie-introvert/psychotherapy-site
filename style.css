@@ -1031,11 +1031,14 @@ a:focus-visible {
 }
 
 .appointment-type:hover {
+    border-color: var(--acc-green);
     background-color: var(--acc-peach);
+    box-shadow: var(--shadow-card-hover);
 }
 
-.appointment-type:selected {
+.appointment-type.selected {
     background-color: var(--muted-txt);
+    color: var(--inverted-txt);
     border-color: var(--acc-green);
 }
 
@@ -1052,6 +1055,22 @@ a:focus-visible {
     font-size: 1.4rem;
     font-weight: 500;
 }
+
+.appointment-type__price {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    font-size: 1.3rem;
+    color: var(--acc-green);
+    font-weight: 500;
+}
+  
+.appointment-type:hover .appointment-type__price {
+    opacity: 1;
+    max-height: 50px;
+}
+  
 
 /* Booking Date & Time */
 .booking-datetime {
