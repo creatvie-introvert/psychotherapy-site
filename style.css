@@ -315,7 +315,7 @@ a:focus-visible {
 }
 
 .service-card:hover {
-    transform: scale(105%);
+    transform: scale(1.05);
     box-shadow: var(--shadow-card-hover);
 }
 
@@ -599,7 +599,7 @@ a:focus-visible {
 }
 
 .qualification-card:hover {
-    transform: scale(105%);
+    transform: scale(1.05);
     box-shadow: var(--shadow-card-hover);
 }
 
@@ -807,6 +807,74 @@ a:focus-visible {
     margin-top: 2rem;
 }
 
+/* Services page - Expectation section */
+.expectations-section {
+    padding: 6rem 0;
+    background-color: var(--bg-alt);
+}
+
+.expectations-section__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+}
+
+.expectations-section__header h2 {
+    flex: 1 1 300px;
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.expectations-section__header p {
+    flex: 2 1 400px;
+    max-width: 600px;
+    color: var(--muted-txt);
+}
+
+.expectations-section__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.4rem;
+}
+
+.expectation-card {
+    background-color: var(--bg-surface);
+    border-radius: 1.2rem;
+    box-shadow: var(--shadow-card);
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.expectation-card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.expectation-card__icon {
+    font-size: 2.4rem;
+    color: var(--acc-green);
+}
+
+.expectation-card__icon svg {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.expectation-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.expectation-card p {
+    color: var(--muted-txt);
+}
+
 /* ======================
    Animations / Keyframes
    ====================== */
@@ -827,7 +895,7 @@ a:focus-visible {
 
 .animate-on-scroll.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: 0 0;
 }
 
 /* Fade from left */
