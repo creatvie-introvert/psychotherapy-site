@@ -82,7 +82,7 @@ a:hover {
     color: var(--acc-green);
 }
 
-h1, h2 { font-weight: 720; }
+h1, h2 { font-weight: 700; }
 
 h1, h2, p { line-height: 1.2; }
 
@@ -1168,6 +1168,30 @@ a:focus-visible {
     color: var(--acc-green);
 }
   
+/* Emergency Contact page styles */
+.emergency-contacts {
+    padding: 6rem 0;
+}
+
+.emergency-contacts__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 6rem;
+}
+
+.contact-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    color: var(--muted-txt);
+}
+
+.contact-card a {
+    text-decoration: underline;
+}
 
 /* ======================
    Animations / Keyframes
